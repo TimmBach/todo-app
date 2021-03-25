@@ -12,7 +12,11 @@ function App() {
 
   useEffect(() => {
     // code to run when the page loads
-  }, []);
+    db.collection("todos").onSnapshot((snapshot) => {
+      console.log(snapshot.docs.map((doc) => doc.data()));
+      setTodos(snapshot.docs.map((doc) => doc.data().todo));
+    });
+  }, [input]);
 
   const addTodo = (e) => {
     e.preventDefault();
