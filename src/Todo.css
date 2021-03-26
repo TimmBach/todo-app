@@ -1,7 +1,9 @@
 .todo__list {
   display: flex;
+  min-width: 40vw;
   max-width: 600px;
-  margin: auto !important;
+  /* margin: auto !important; */
 
   align-items: center;
+  text-align: center;
 }

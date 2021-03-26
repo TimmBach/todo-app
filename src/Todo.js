@@ -64,7 +64,9 @@ const Todo = ({ todoObj }) => {
         <ListItem className="todo__listItem">
           <ListItemText primary={todoObj.todo} secondary="Deadline.. ⏰" />
         </ListItem>
-        <button onClick={(e) => setOpen(true)}>Edit</button>
+        <button style={{ marginRight: "7px" }} onClick={(e) => setOpen(true)}>
+          Edit
+        </button>
 
         <DeleteForever
           onClick={(e) => db.collection("todos").doc(todoObj.id).delete()}
