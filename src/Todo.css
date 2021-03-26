@@ -7,3 +7,13 @@
   align-items: center;
   text-align: center;
 }
+
+.todo__listEditButton {
+  margin-right: 7px;
+  cursor: pointer;
+}
+
+.todo__listDeleteButton {
+  margin-right: 7px !important;
+  cursor: pointer !important;
+}
