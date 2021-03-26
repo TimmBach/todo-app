@@ -17,7 +17,9 @@ function App() {
       .orderBy("timestamp", "desc")
       .onSnapshot((snapshot) => {
         // console.log(snapshot.docs.map((doc) => doc.data()));
-        setTodos(snapshot.docs.map((doc) => doc.data().todo));
+        setTodos(
+          snapshot.docs.map((doc) => ({ id: doc.id, todo: doc.data().todo }))
+        );
       });
   }, []);
 
@@ -51,7 +53,7 @@ function App() {
 
       <ul>
         {todos.map((todo) => (
-          <Todo text={todo} />
+          <Todo todoObj={todo} />
         ))}
       </ul>
     </div>
