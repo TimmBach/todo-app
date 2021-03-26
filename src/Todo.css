@@ -3,7 +3,7 @@
   min-width: 40vw;
   max-width: 600px;
   /* margin: auto !important; */
-
+  margin-left: -50px;
   align-items: center;
   text-align: center;
 }

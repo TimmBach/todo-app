@@ -1,6 +1,7 @@
 import {
   Avatar,
   Button,
+  Input,
   List,
   ListItem,
   ListItemAvatar,
@@ -48,7 +49,7 @@ const Todo = ({ todoObj }) => {
       <Modal open={open} onClose={(e) => setOpen(false)}>
         <div className={classes.paper}>
           <form>
-            <input
+            <Input
               placeholder={todoObj.todo}
               value={input}
               onChange={(e) => setInput(e.target.value)}
