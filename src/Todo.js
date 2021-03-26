@@ -48,7 +48,6 @@ const Todo = ({ todoObj }) => {
       <Modal open={open} onClose={(e) => setOpen(false)}>
         <div className={classes.paper}>
           <form>
-            <h1>Hi I am a modal</h1>
             <input
               placeholder={todoObj.todo}
               value={input}
