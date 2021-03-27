@@ -35,7 +35,7 @@ function App() {
   // console.log("goal");
   return (
     <div className="app">
-      <form>
+      <form className="app__form">
         <FormControl>
           <InputLabel> write a todo...</InputLabel>
           <Input value={input} onChange={(e) => setInput(e.target.value)} />

@@ -1,11 +1,17 @@
 .todo__list {
   display: flex;
+  justify-content: space-between;
   min-width: 40vw;
   max-width: 600px;
   /* margin: auto !important; */
-  margin-left: -50px;
+  /* margin-left: -50px; */
   align-items: center;
-  text-align: center;
+  /* text-align: center; */
+}
+
+.todo__listItem {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .todo__listEditButton {
@@ -14,6 +20,9 @@
 }
 
 .todo__listDeleteButton {
-  margin-right: 7px !important;
   cursor: pointer !important;
+}
+.todo__listButton {
+  display: flex;
+  align-items: center;
 }
