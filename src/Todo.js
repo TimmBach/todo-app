@@ -60,29 +60,18 @@ const Todo = ({ todoObj }) => {
           </form>
         </div>
       </Modal>
+      <List className="todo__list">
+        <ListItem className="todo__listItem">
+          <ListItemText primary={todoObj.todo} secondary="Deadline.. ⏰" />
+        </ListItem>
+        <button className="todo__listEditButton" onClick={(e) => setOpen(true)}>
+          Edit
+        </button>
 
-      <List>
-        <div className="todo__list">
-          <div className="todo__listItem">
-            <ListItem>
-              <ListItemText primary={todoObj.todo} secondary="Deadline.. ⏰" />
-            </ListItem>
-          </div>
-
-          <div className="todo__listButton">
-            <button
-              className="todo__listEditButton"
-              onClick={(e) => setOpen(true)}
-            >
-              Edit
-            </button>
-
-            <DeleteForever
-              className="todo__listDeleteButton"
-              onClick={(e) => db.collection("todos").doc(todoObj.id).delete()}
-            />
-          </div>
-        </div>
+        <DeleteForever
+          className="todo__listDeleteButton"
+          onClick={(e) => db.collection("todos").doc(todoObj.id).delete()}
+        />
       </List>
     </div>
   );
