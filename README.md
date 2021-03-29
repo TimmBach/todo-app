@@ -1,6 +1,6 @@
 # Todo-list app 
 
-A web application that allows you to add, delete and edit items to list of items.
+A web application that allows you to add, delete and edit items IN list of items.
 
 
 # What i learned
